@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HAREM</title>
+<style type="text/css">
+@import url("still.css");
+</style>
+</head>
+
+<body>
+	<div class="menu">
+        <ul>
+            <li><a href="index.html" title="">Anasayfa</a></li>
+            <li><a href="" title="">Odevler</a>
+                <ul>
+                    <li><a href="odev 1.html" title="">Odev 1</a></li>
+                    <li><a href="odev 2.html" title="">Odev 2</a></li>
+                    <li><a href="odev 3.html" title="">Odev 3 </a></li>
+					<li><a href="odev 4.html" title="">Odev 4 </a></li>
+					<li><a href="odev 5.html" title="">Odev 5 </a></li>
+					<li><a href="odev 6.html" title="">Odev 6 </a></li>
+					<li><a href="odev 7.html" title="">Odev 7 </a></li>
+					<li><a href="odev 8.html" title="">Odev 8 </a></li>
+					<li><a href="odev 9.html" title="">Odev 9 </a></li>
+					<li><a href="odev 10.html" title="">Odev 10 </a></li>
+					<li><a href="odev 11.html" title="">Odev 11 </a></li>
+					<li><a href="odev 12.html" title="">Odev 12 </a></li>
+				</ul>
+            </li>
+            <li><a href="Hakkımda.html" title="">Hakkımda</a></li>
+            <li><a href="iletişim.html" title="">Bize Ulaşın</a></li>
+			 <li><a href="https://leynesshawty.github.io/enes.io/" title="">Siteme git</a></li>
+        </ul>
+		
+    </div>
+	
+	            <div id="container">
+                <div id="dijital"><span id="sonuc"></span></div>
+                <div id="box">
+                    <a href="#" class="tus islem">7</a>
+                    <a href="#" class="tus islem">8</a>
+                    <a href="#" class="tus islem">9</a>
+                    <a href="#" class="tus2 islem">/</a>
+                    <a href="#" class="tus islem">4</a>
+                    <a href="#" class="tus islem">5</a>
+                    <a href="#" class="tus islem">6</a>
+                    <a href="#" class="tus2 islem">*</a>
+                    <a href="#" class="tus islem">1</a>
+                    <a href="#" class="tus islem">2</a>
+                    <a href="#" class="tus islem">3</a>
+                    <a href="#" class="tus2 islem">-</a>
+                    <a id="clean" href="#" class="tus2 islem">C</a>
+                    <a href="#" class="tus islem">0</a>
+                    <a id="hesapla" href="#" class="tus2 islem">=</a>
+                    <a href="#" class="tus2 islem">+</a>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            <style>
+               
+                
+             
+                #dijital {
+                    width: 270px;
+                    height: 60px;
+                    border: 1px solid rgb(0, 0, 0);
+                    border-radius: 20px;
+                    margin: auto;
+                    margin-top: 15px;
+                    background: #746d80;
+                }
+             
+               
+                .islem {
+                    font-size: 50px;
+                    text-decoration: none;
+                }
+             
+                .tus {
+                    width: 60px;
+                    height: 60px;
+                    border: 1px solid  rgb(0, 0, 0);
+                    border-radius: 10px;
+                    margin: 0 2px 6px 2px;
+                    display: inline-block;
+                    color: rgb(0, 0, 0);
+                    background: rgb(114, 114, 114);
+                }
+             
+                .tus:hover {
+                    background: rgb(255, 255, 255);
+                }
+             
+                .tus2:hover {
+                    background: rgb(177, 11, 11);
+                }
+             
+                .tus2 {
+                    width: 60px;
+                    height: 60px;
+                    border: 1px solid rgb(0, 0, 0);
+                    border-radius: 10px;
+                    margin: 0 2px 6px 2px;
+                    display: inline-block;
+                    color: #fff;
+                    background: #BCC0C7;
+                }
+             
+                #sonuc {
+                    display: inline-block;
+                    transform: translate(-0%, 0%);
+                    font-size: 55px;
+                    text-align: center;
+                    width: 270px;
+                }
+             
+                #clean {
+                    background: rgb(255, 0, 0);
+                }
+             
+                #clean:hover {
+                    background: #9e2121;
+                }
+             
+            </style>
+            
+            
+            <script>
+            
+            let secim = document.querySelector("#box").children;
+            let sonuc = document.querySelector("#sonuc");
+            let clean = document.querySelector("#clean");
+            let hesap = document.querySelector("#hesapla");
+            
+            
+            clean.addEventListener("click", temizle);
+            hesap.addEventListener("click", hesapla);
+            
+            
+            for (var i = 0; i < 16; i++) {
+                if (i != 12 && i != 14) { 
+                    secim[i].addEventListener("click", yazdir);
+                }
+            }
+            
+            
+            function hesapla() {
+                sonuc.innerText = eval(sonuc.innerText);
+                if (eval(sonuc.innerText.length) > 8) { 
+                    sonuc.innerText = eval(sonuc.innerText).toPrecision(8);
+                }
+            }
+            
+            
+            function temizle() {
+                sonuc.innerText = " ";
+            }
+            
+            
+            function yazdir() {
+                if (sonuc.innerText.length < 8) 
+                    sonuc.innerText = sonuc.innerText + this.innerText;
+            }
+            
+            </script>
+
+
+	
+	</body>
+	</html>
+
